@@ -1,0 +1,8 @@
+CREATE DATABASE bdagenda;
+CREATE TABLE tbcontatos(
+    codigo INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    telefone BIGINT NOT NULL,
+    alterar VARCHAR(11) NOT NULL,
+    excluir VARCHAR(11) NOT NULL
+);
