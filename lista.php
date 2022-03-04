@@ -27,7 +27,6 @@
                     //monta a string de inserção de dados
                     $insere = "INSERT INTO tbcontatos (nome,telefone) VALUES ('$nome', '$telefone')";
                     //executa o sql
-                    //mysqli_query($conn, $insere);
                     $connpdo->query($insere);
                     //fecha a conexão com banco de dados
                     $_REQUEST['Nome']="";
@@ -81,9 +80,7 @@
         <?php
             include_once('conexao.php');
             $sql = "SELECT * FROM tbcontatos ORDER BY nome";
-            //$res = mysqli_query($conn, $sql) or die("erro");
             $res = $connpdo->query($sql);
-            //$total = mysqli_num_rows($res);
             $total = $res->rowCount();
             echo "<H3 align = center> O Total de Contatos é: $total </H3>
             <p align = center><a href='?'>Novo</a></p>";
