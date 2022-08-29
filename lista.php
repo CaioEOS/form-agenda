@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     </head>
     <body>
         <?php
@@ -74,7 +76,7 @@
             Nome: <input type="text" name="Nome" value="<?php echo $_REQUEST["Nome"] ?>" required ><p>
             Telefone: <input type="number" name="Telefone" value="<?php echo $_REQUEST["Telefone"] ?>" required step="0.01" ><p>
             
-            <input type="submit" value="<?php echo $btnValue ?>" name="<?php echo $btnName ?>">
+            <input type="submit" class = "btn btn-dark" value="<?php echo $btnValue ?>" name="<?php echo $btnName ?>">
         </form>
 
         <?php
@@ -84,8 +86,8 @@
             $total = $res->rowCount();
             echo "<H3 align = center> O Total de Contatos é: $total </H3>
             <p align = center><a href='?'>Novo</a></p>";
-            echo "<TABLE BORDER = 10 align = center >
-            <TR>
+            echo "<TABLE class = 'table table-hover' align = center >
+            <TR class = 'table-dark'>
                 <TD> CODIGO
                 <TD> NOME
                 <TD> TELEFONE
