@@ -41,7 +41,9 @@
             $_REQUEST['Nome']="";
             $_REQUEST['Telefone']="";
         }else{
+            echo"<div class='alert alert-danger' role='alert'>";
             echo"<H4 align = center> Impossivel Cadastrar. $nome Já existe. </H4>";
+            echo"</div>";
         }
     }
 //Deleta do Banco de dados
@@ -77,18 +79,24 @@
     }
 ?>
         <form method="POST" action="cadastro.php">
-            <div class="mb-3 col-2">
-                <input type="hidden" name="Codigo" value="<?php echo $_REQUEST["Codigo"] ?>">
-                <label for="Nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" name="Nome" id="Nome" value="<?php echo $_REQUEST["Nome"] ?>"
-                    required>
+            <div class="d-flex justify-content-center">
+                <div class="mb-3 col-2">
+                    <input type="hidden" name="Codigo" value="<?php echo $_REQUEST["Codigo"] ?>">
+                    <label for="Nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" name="Nome" id="Nome"
+                        value="<?php echo $_REQUEST["Nome"] ?>" required>
+                </div>
             </div>
-            <div class="mb-3 col-2">
-                <label for="Telefone" class="form-label">Telefone</label>
-                <input type="number" class="form-control" name="Telefone" id="Telefone"
-                    value="<?php echo $_REQUEST["Telefone"] ?>" required>
+            <div class="d-flex justify-content-center">
+                <div class="mb-3 col-2">
+                    <label for="Telefone" class="form-label">Telefone</label>
+                    <input type="number" class="form-control" name="Telefone" id="Telefone"
+                        value="<?php echo $_REQUEST["Telefone"] ?>" required>
+                </div>
             </div>
-            <input type="submit" class="btn btn-dark" value="<?php echo $btnValue ?>" name="<?php echo $btnName ?>">
+            <div class="d-flex justify-content-center mb-3">
+                <input type="submit" class="btn btn-dark" value="<?php echo $btnValue ?>" name="<?php echo $btnName ?>">
+            </div>
         </form>
 
         <p align=center><a href='?' class="btn btn-dark">Novo</a></p>
