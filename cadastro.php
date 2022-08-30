@@ -103,7 +103,7 @@
 
         <TABLE class='table table-hover' align=center>
             <?php
-include "lista.php";
+        include "lista.php";
 ?>
         </table>
     </div>
