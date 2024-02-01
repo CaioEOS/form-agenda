@@ -1,8 +1,8 @@
 <?php
 try{
     $servidor="localhost";
-    $usuario="root";
-    $senha="";
+    $usuario="caio";
+    $senha="$-12.02.Rc";
     $dbname="bdagenda";
     //criando a conexão
     //$conn = mysqli_connect($servidor, $usuario, $senha, $dbname) or die ("erro");
