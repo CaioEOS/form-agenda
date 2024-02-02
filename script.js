@@ -17,7 +17,7 @@ const phoneMask = (value) => {
 
   // Aplica a máscara (xx) xxxx-xxxx ao número de telefone.
   value = value.replace(/(\d{2})(\d)/, "($1) $2");
-  value = value.replace(/(\d)(\d{5})$/, "$1-$2");
+  value = value.replace(/(\d)(\d{4})$/, "$1-$2");
 
   // Retorna o valor com a máscara aplicada.
   return value;
