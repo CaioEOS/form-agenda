@@ -37,6 +37,8 @@ elseif (isset($_POST['btnDel'])) {
     $_REQUEST['Codigo'] = "";
     $_REQUEST['Nome'] = "";
     $_REQUEST['Telefone'] = "";
+    header("Location: tabela.php");
+    exit();
 }
 //Atualiza o banco de dados
 elseif (isset($_POST['btnSalvar'])) {
@@ -45,6 +47,8 @@ elseif (isset($_POST['btnSalvar'])) {
     $_REQUEST['Codigo'] = "";
     $_REQUEST['Nome'] = "";
     $_REQUEST['Telefone'] = "";
+    header("Location: tabela.php");
+    exit();
 }
 if (isset($_GET['acao'])) {
     $sql = "SELECT * FROM tbcontatos WHERE codigo = '{$_GET['codigo']}' ";
@@ -55,9 +59,10 @@ if (isset($_GET['acao'])) {
     $_REQUEST["Telefone"] = $registro["telefone"];
     if ($_GET['acao'] == "excluir") {
         $btnName = "btnDel";
-        $btnValue = "Excluir Definitivamento";
+        $btnValue = "Excluir Definitivamente";
     } else {
         $btnName = "btnSalvar";
+
         $btnValue = "Salvar Alterações";
     }
 }
