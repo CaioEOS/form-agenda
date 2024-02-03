@@ -13,6 +13,7 @@
 
 <body>
     <div class="container">
+        <p align=center><a href='Index.php' class="btn btn-dark">Novo</a></p>
         <TABLE class='table table-hover' align=center>
             <?php
             include_once('conexao.php');
