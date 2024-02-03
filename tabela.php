@@ -32,8 +32,8 @@
                         <TD>{$registro["codigo"]}
                         <TD>{$registro["nome"]}
                         <TD>{$registro["telefone"]}
-                        <TD><a href='Index.php?acao=editar&codigo={$registro["codigo"]}'>Editar</a>
-                        <TD><a href='Index.php?acao=excluir&codigo={$registro["codigo"]}'>Excluir</a>";
+                        <TD><a href='Index.php?acao=editar&codigo={$registro["codigo"]}' class='btn btn-dark'>Editar</a>
+                        <TD><a href='Index.php?acao=excluir&codigo={$registro["codigo"]}' class='btn btn-dark'>Excluir</a>";
             }
             ?>
         </table>
